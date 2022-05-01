@@ -1,4 +1,3 @@
-
 ####### Problem 3 #######
 
 test_cases = [('book', 'back'), ('kookaburra', 'kookybird'), ('elephant', 'relevant'), ('AAAGAATTCA', 'AAATCA')]
@@ -41,11 +40,10 @@ def fast_MED(S, T, MED={}):
         val = min(insert, delete, replace)
 
         MED[(S, T)] = val
-        
         return val
             
 
-def fast_align_MED(S, T, S_align, T_align MED={}):
+def fast_align_MED(S, T):
     # TODO - keep track of alignment
     if (S, T) in MED:
         return MED[(S, T)]
