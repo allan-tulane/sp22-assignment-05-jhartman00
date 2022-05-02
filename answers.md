@@ -41,6 +41,7 @@ This algorithm would not be optimal as it is designed to not use more than 1 of 
     - if(i == 0):
       - storage[i] = 0
     - storage[i] = sys.maxsize
+
   - #check all values from 1 to the total
   - for i in range(1, N + 1):
     - #check all values for each sum with all of the coins smaller than i
@@ -48,8 +49,10 @@ This algorithm would not be optimal as it is designed to not use more than 1 of 
       - if(coinList[j] <= i):
         - #collect all data in a another array
         - internalStorage = storage[i - coinList[j]]
+        
         - if(internalStorage) != sys.maxsize and internalStorage + 1 < storage[i]):
           - storage[i] = internalStorage + 1
+
   - return table[N]
 
 - The work and span of this would be W = O(n^2) and the span would also be S = O(n^2)

@@ -43,7 +43,7 @@ def fast_MED(S, T, MED={}):
         return val
             
 
-def fast_align_MED(S, T):
+def fast_align_MED(S, T, MED={}):
     # TODO - keep track of alignment
     if (S, T) in MED:
         return MED[(S, T)]
